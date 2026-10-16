@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MyPortfolio</div>
+      
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <!-- 1. Home / Hero Section -->
+  <section id="home" class="section hero">
+    <div class="hero-container">
+      <div class="hero-image">
+        <!-- Your profile picture -->
+        <img src="assets/profile.png" alt="Profile Photo" onerror="this.src='https://placehold.co/180x180?text=Profile'" />
+      </div>
+      <div class="hero-content">
+        <h1>Hello, I'm <span class="highlight">Sajal Saha</span></h1>
+        <p>Passionate Frontend Developer & Problem Solver</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <p>
+        I am a Computer Science student enthusiastic about software development,
+        building responsive web applications, and solving real-world challenges. 
+        I enjoy turning complex ideas into clean, functional code.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. Skills Section -->
+  <section id="skills" class="section">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Languages</h3>
+        <p>Java, Python, C, JavaScript</p>
+      </div>
+      <div class="skill-card">
+        <h3>Web Development</h3>
+        <p>HTML5, CSS3, Responsive Design</p>
+      </div>
+      <div class="skill-card">
+        <h3>Databases</h3>
+        <p>MySQL, MariaDB</p>
+      </div>
+      <div class="skill-card">
+        <h3>Tools & Platforms</h3>
+        <p>Git, GitHub, VS Code, NetBeans</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Projects Section -->
+  <section id="projects" class="section">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+      
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="assets/project1.png" alt="Restaurant Management Screenshot with multiple combinations of various types of Starters, Soups, Salads, Main courses, Side dishes, drinks and Desserts are displayed along with price details , quantities and reciept generation" onerror="this.src='https://placehold.co/400x220?text=Project+1'"  />
+        <div class="project-info">
+          <h3>Cafe Ordering & Billing System</h3>
+          <p>A desktop receipt and management tool with database connectivity.</p>
+          <div class="project-links">
+            <a href="https://github.com/SajalSaha151202/netbeanPro/tree/main/Myproject1" target="_blank" class="btn-sm">GitHub</a>
+            <a href="https://github.com/SajalSaha151202/netbeanPro/releases/tag/restaurant-v1.0/restaurant.exe" target="_blank" class="btn-sm btn-outline">Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="assets/project2.png" alt="Library Management Screenshot where Authors, Publishers, Members and books information is displayed along with issuing and returning dates" onerror="this.src='https://placehold.co/400x220?text=Project+2'" />
+        <div class="project-info">
+          <h3>Library Management System</h3>
+          <p>Application to track book loans, returns, and inventory records.</p>
+          <div class="project-links">
+            <a href="https://github.com/SajalSaha151202/netbeanPro/tree/main/Myproject5" target="_blank" class="btn-sm">GitHub</a>
+            <a href="https://github.com/SajalSaha151202/netbeanPro/releases/tag/Library_v1.0/Myproject5.exe" target="_blank" class="btn-sm btn-outline">Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="assets/project3.png" alt="School Management Screenshot where students, teachers, and faculties information is displayed along with fees details" onerror="this.src='https://placehold.co/400x220?text=Project+3'" />
+        <div class="project-info">
+          <h3>School Management System</h3>
+          <p>Software system built for handling student details and academic records.</p>
+          <div class="project-links">
+            <a href="https://github.com/SajalSaha151202/netbeanPro/tree/main/MyProject3(pro)" target="_blank" class="btn-sm">GitHub</a>
+            <a href="https://github.com/SajalSaha151202/netbeanPro/releases/tag/school_v1.0/Myproject3.exe" target="_blank" class="btn-sm btn-outline">Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Resume Section -->
+  <section id="resume" class="section resume">
+    <h2>Resume</h2>
+    <p>Check out my complete educational background and technical accomplishments.</p>
+    <!-- Download button for your PDF file -->
+    <a href="assets/resume.pdf" download class="btn">Download Resume (PDF)</a>
+  </section>
+
+  <!-- 6. Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contact-form" class="contact-form" novalidate>
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+        <span class="error-msg" id="name-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        <span class="error-msg" id="email-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        <span class="error-msg" id="message-error"></span>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+      <p class="success-msg" id="form-status"></p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 My Portfolio. Built with HTML, CSS & JavaScript.</p>
+  </footer>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
