@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💰 Expense Tracker</h1>
+      <p class="subtitle">Keep track of your income, expenses, and savings</p>
+    </header>
+
+    <!-- Step 1 & Requirement: Summary Cards -->
+    <section class="summary-grid">
+      <div class="card balance-card">
+        <h3>Total Balance</h3>
+        <p id="total-balance">₹0.00</p>
+      </div>
+      <div class="card income-card">
+        <h3>Total Income</h3>
+        <p id="total-income">₹0.00</p>
+      </div>
+      <div class="card expense-card">
+        <h3>Total Expenses</h3>
+        <p id="total-expense">₹0.00</p>
+      </div>
+    </section>
+
+    <!-- Step 2: Input Form -->
+    <section class="form-section" tabindex="0">
+      <h2 id="form-heading">Add New Transaction</h2>
+      <form id="transaction-form">
+        <input type="hidden" id="edit-id" value="">
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" id="description" placeholder="e.g., Ice Cream, Pocket Money" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="amount">Amount (₹)</label>
+            <input type="number" id="amount" placeholder="0" min="0.01" step="any" required>
+          </div>
+
+          <div class="form-group">
+            <label for="type">Type</label>
+            <select id="type" required>
+              <option value="expense">Expense (-)</option>
+              <option value="income">Income (+)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" required>
+              <option value="Food & Snacks">Food & Snacks</option>
+              <option value="Books & Stationery">Books & Stationery</option>
+              <option value="Games & Toys">Games & Toys</option>
+              <option value="Allowance / Gift">Allowance / Gift</option>
+              <option value="Transport">Transport</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submit-btn" class="btn primary-btn">Add Transaction</button>
+          <button type="button" id="cancel-btn" class="btn secondary-btn" style="display: none;">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Step 3: Transaction History & Category Filter -->
+    <section class="history-section" tabindex="0">
+      <div class="history-header">
+        <h2>Transaction History</h2>
+        <div class="filter-box">
+          <label for="filter-category">Filter Category:</label>
+          <select id="filter-category">
+            <option value="All">All Categories</option>
+            <option value="Food & Snacks">Food & Snacks</option>
+            <option value="Books & Stationery">Books & Stationery</option>
+            <option value="Games & Toys">Games & Toys</option>
+            <option value="Allowance / Gift">Allowance / Gift</option>
+            <option value="Transport">Transport</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <ul id="transaction-list" class="transaction-list">
+        <!-- Dynamic list entries will appear here -->
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
