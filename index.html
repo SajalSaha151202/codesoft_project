@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Web Music Player</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="player-container">
+    <!-- Top Header -->
+    <div class="player-header">
+      <button id="favorite-btn" class="icon-btn" title="Add to Favorites">
+        <i class="fa-regular fa-heart"></i>
+      </button>
+      <span class="header-title">Now Playing</span>
+      <button id="playlist-toggle-btn" class="icon-btn" title="Toggle Playlist">
+        <i class="fa-solid fa-list-ul"></i>
+      </button>
+    </div>
+
+    <!-- Main Player Body -->
+    <div class="player-main">
+      <!-- Album Cover -->
+      <div class="artwork-wrapper">
+        <img id="cover-art" src="https://picsum.photos/300/300?random=1" alt="Album Cover">
+      </div>
+
+      <!-- Track Information -->
+      <div class="track-details">
+        <h2 id="song-title">Song Title</h2>
+        <p id="artist-name">Artist Name</p>
+      </div>
+
+      <!-- Progress Bar (Seeker) -->
+      <div class="progress-section">
+        <div class="time-display">
+          <span id="current-time">0:00</span>
+          <span id="total-duration">0:00</span>
+        </div>
+        <div class="progress-bar-container" id="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- Playback Controls -->
+      <div class="controls-section">
+        <button id="shuffle-btn" class="control-btn-sub" title="Shuffle">
+          <i class="fa-solid fa-shuffle"></i>
+        </button>
+
+        <button id="prev-btn" class="control-btn" title="Previous">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+
+        <button id="play-btn" class="play-main-btn" title="Play">
+          <i class="fa-solid fa-play" id="play-icon"></i>
+        </button>
+
+        <button id="next-btn" class="control-btn" title="Next">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+
+        <button id="repeat-btn" class="control-btn-sub" title="Repeat">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+      </div>
+
+      <!-- Volume & Mute Controls -->
+      <div class="volume-container">
+        <button id="mute-btn" class="icon-btn" title="Mute/Unmute">
+          <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+        </button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.8">
+      </div>
+    </div>
+
+    <!-- Playlist Drawer / Section -->
+    <div class="playlist-section" id="playlist-section">
+      <div class="playlist-header">
+        <h3>Playlist</h3>
+        <button id="close-playlist" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul id="playlist-songs" class="playlist-list">
+        <!-- Dynamically generated with JavaScript -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hidden HTML5 Audio Element -->
+  <audio id="audio-player" preload="metadata"></audio>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
